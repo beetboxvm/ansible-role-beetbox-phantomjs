@@ -1,0 +1,4 @@
+---
+workspace: /root
+phantomjs_version: 2.1.1
+phantomjs_bin_path: /usr/local/bin/phantomjs
