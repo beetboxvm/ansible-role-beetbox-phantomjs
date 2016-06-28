@@ -4,7 +4,7 @@
     src: "https://github.com/Medium/phantomjs/releases/download/v{{ phantomjs_version }}/phantomjs-{{ phantomjs_version }}-linux-x86_64.tar.bz2"
     dest: "{{ workspace }}"
     copy: no
-    creates: "{{ workspace }}/phantomjs-{{ phantomjs_version }}-linux-x86_64.tar.bz2"
+    creates: "{{ workspace }}/phantomjs-{{ phantomjs_version }}-linux-x86_64"
 
 - name: Add phantomjs to local bin.
   copy:
