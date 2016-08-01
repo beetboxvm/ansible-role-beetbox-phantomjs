@@ -1,4 +1,7 @@
 ---
+dependencies:
+  - geerlingguy.daemonize
+
 galaxy_info:
   author: thom8
   description: Phantomjs role for beetbox.
@@ -14,4 +17,3 @@ galaxy_info:
     - installer
     - phantomjs
     - web
-dependencies: []

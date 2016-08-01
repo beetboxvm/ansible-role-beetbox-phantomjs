@@ -11,3 +11,15 @@
     src: "{{ workspace }}/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
     dest: "{{ phantomjs_bin_path }}"
     mode: 0755
+
+- name: Copy phantomjs init script into place.
+  template:
+    src: phantomjs.init.j2
+    dest: /etc/init.d/phantomjs
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Ensure phantomjs is enabled and will start on boot.
+  service: name=phantomjs state=started enabled=yes
+  when: "{{ phantomjs_webdriver }}"
